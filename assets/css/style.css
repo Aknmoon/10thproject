@@ -36,6 +36,18 @@ grid
 .grid-col-4 > .grid-item{
   width: 25%;
 }
+@media screen and (max-width: 768px){
+  .grid{
+    display: block;
+  }
+  .grid-col-2 > .grid-item,
+  .grid-col-3 > .grid-item,
+  .grid-col-4 > .grid-item{
+    width: 100%;
+    margin: 20px 0;
+  }
+
+}
 
 /* section */
 .section{
@@ -52,10 +64,21 @@ grid
   /* top/ right,left/bottom */
 }
 .section-button{
-  margin-top: 40px;
+  margin-top: 40px 0 0;
   text-align: center;
 }
-
+@media screen and (max-width: 768px){
+  .section{
+    padding: 20px 1opx;
+  }
+  .section-headline{
+    font-size: 30px;
+    margin: 0 0 20px;
+  }
+  .section-button{
+    margin: 20px 0 0;
+  }
+}
 /* 
 header 
 */
@@ -84,7 +107,7 @@ header
   justify-content: space-between;
   align-items: center;
 }
-.header-navitem{}
+/* .header-navitem{} */
 .header-navitem > a{
   display: block;
   padding: 10px;
@@ -96,6 +119,11 @@ header
 }
 .header-navitem > a:hover{
   border-bottom: 2px solid #333;
+}
+@media screen and (max-width: 768px){
+  .header{
+    font-size: 12px;
+  }
 }
 /* 
 hero
@@ -131,6 +159,11 @@ hero
    width: 100%;
    height: 100%;
  }
+ @media screen and (max-width: 768px){
+   .hero >strong{
+     font-size: 50px;
+   }
+ }
 /* 
 about 
 */
@@ -146,7 +179,20 @@ about
   margin: 0 0 20px;
   font-size: 30px;
 }
-.about-description{}
+/* .about-description{} */
+@media screen and (max-width: 768px){
+  .about{
+    display: block;
+  }
+  .about-image{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .about-headline{
+    font-size: 20px;
+    text-align: center;
+  }
+}
 
 
 /* 
@@ -274,6 +320,14 @@ button
     min-width: 500px;
     min-height: 100px;
   }
+  @media screen and (max-width: 768px){
+    .select,
+    .input,
+    .textarea{
+      min-width: auto;
+      width: 100%;
+  }
+}
 
   /* 
   form
@@ -293,6 +347,15 @@ button
      text-align: center;
      margin: 20px;
    }
+   @media screen and (max-width: 768px){
+    .form-table,
+    .form-table tbody,
+    .form-table tr,
+    .form-table th,
+    .form-table td{
+      display: block;
+    }
+  }
 
    /* 
    works
@@ -304,6 +367,16 @@ button
     }
     .works > img{
       margin: 0 15px;
+    }
+    @media screen and (max-width: 768px){
+      .works{
+        margin: 20px 0;
+        padding: 10px;
+      }
+      .works > img{
+        width: 100px;
+        margin: 5px;
+      }
     }
 
     /* 
@@ -349,4 +422,18 @@ button
   display: block;
   text-align: center;
   padding: 10px;
+}
+@media screen and (max-width: 768px){
+  .footer-map{
+    padding: 15px;
+    display: block;
+  }
+  .footer-map > iframe{
+    width: 100%;
+    height: 200px;
+  }
+  .footer-mapinfo{
+    width: 100%;
+    text-align: center;
+  }
 }
